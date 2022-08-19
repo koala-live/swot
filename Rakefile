@@ -48,7 +48,7 @@ task :quackit_import do
   require_relative File.join('lib', 'swot', 'academic_tlds')
 
   new_domains = Set.new
-  doc = Nokogiri::HTML(open('http://www.quackit.com/domain-names/country_domain_extensions.cfm'))
+  doc = Nokogiri::HTML(URI.open('http://www.quackit.com/domain-names/country_domain_extensions.cfm'))
   doc.css('#content li').each do |li|
     desc = li.content.split(/\s+-\s+/, 2)[1]
     next unless desc =~ /academic|education|school/i
