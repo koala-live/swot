@@ -1,13 +1,13 @@
-source "http://rubygems.org"
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+ruby '3.1.2'
+
+gem 'naughty_or_nice', '~> 2.0'
 gem 'public_suffix'
-gem 'naughty_or_nice', "~> 2.0"
 
 group :development do
-  gem "nokogiri", "~> 1.5"
-  gem "rake", "~> 10.0"
-  gem "rdoc", "~> 3.12"
-  gem "bundler", "~> 1.5"
-  gem "jeweler", "~> 1.8"
-  gem "minitest", "~> 4.7.5"
+  gem 'minitest', '~> 4.7.5'
+  gem 'nokogiri', '~> 1.5'
+  gem 'rake', '~> 10.0'
 end

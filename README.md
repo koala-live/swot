@@ -27,31 +27,31 @@ Or add this to your `Gemfile` before doing a `bundle install`:
 #### Verify Email Addresses
 
 ```ruby
-Swot::is_academic? 'lreilly@stanford.edu'           # true
-Swot::is_academic? 'lreilly@strath.ac.uk'           # true
-Swot::is_academic? 'lreilly@soft-eng.strath.ac.uk'  # true
-Swot::is_academic? 'pedro@ugr.es'                   # true
-Swot::is_academic? 'lee@uottawa.ca'                 # true
-Swot::is_academic? 'lee@leerilly.net'               # false
+Swot.is_academic? 'lreilly@stanford.edu'           # true
+Swot.is_academic? 'lreilly@strath.ac.uk'           # true
+Swot.is_academic? 'lreilly@soft-eng.strath.ac.uk'  # true
+Swot.is_academic? 'pedro@ugr.es'                   # true
+Swot.is_academic? 'lee@uottawa.ca'                 # true
+Swot.is_academic? 'lee@leerilly.net'               # false
 ```
 
 #### Verify Domain Names
 
 ```ruby
-Swot::is_academic? 'harvard.edu'              # true
-Swot::is_academic? 'www.harvard.edu'          # true
-Swot::is_academic? 'http://www.harvard.edu'   # true
-Swot::is_academic? 'http://www.github.com'    # false
-Swot::is_academic? 'http://www.rangers.co.uk' # false
+Swot.is_academic? 'harvard.edu'              # true
+Swot.is_academic? 'www.harvard.edu'          # true
+Swot.is_academic? 'http://www.harvard.edu'   # true
+Swot.is_academic? 'http://www.github.com'    # false
+Swot.is_academic? 'http://www.rangers.co.uk' # false
 ```
 
 #### Find School Names
 
 ```ruby
-Swot::school_name 'lreilly@cs.strath.ac.uk'
+Swot.school_name 'lreilly@cs.strath.ac.uk'
 # => "University of Strathclyde"
 
-Swot::school_name 'http://www.stanford.edu'
+Swot.school_name 'http://www.stanford.edu'
 # => "Stanford University"
 ```
 

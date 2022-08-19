@@ -2,7 +2,7 @@ require 'set'
 
 class Swot
   # These top-level domains are guaranteed to be academic institutions.
-  ACADEMIC_TLDS = %w(
+  ACADEMIC_TLDS = %w[
     ac.ae
     ac.at
     ac.bd
@@ -245,5 +245,5 @@ class Swot
     tec.wi.us
     tec.wv.us
     vic.edu.au
-  ).to_set.freeze
+  ].to_set.freeze
 end

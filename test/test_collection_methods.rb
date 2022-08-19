@@ -4,10 +4,10 @@ require 'tmpdir'
 
 describe 'SwotCollectionMethods' do
   before do
-    @tmp_dir = Dir.mktmpdir "swot-test"
+    @tmp_dir = Dir.mktmpdir 'swot-test'
     Swot.instance_variable_set(:@domains_path, @tmp_dir)
-    write_domain_file "students.texas.edu"
-    write_domain_file "mit.edu"
+    write_domain_file 'students.texas.edu'
+    write_domain_file 'mit.edu'
   end
 
   after do
@@ -26,8 +26,8 @@ describe 'SwotCollectionMethods' do
     it 'gets all domains from files on disk' do
       all_domains = Swot.all_domains
       assert_equal all_domains.size, 2
-      assert_includes all_domains, "students.texas.edu"
-      assert_includes all_domains, "mit.edu"
+      assert_includes all_domains, 'students.texas.edu'
+      assert_includes all_domains, 'mit.edu'
     end
   end
 
@@ -36,9 +36,9 @@ describe 'SwotCollectionMethods' do
       domains = []
       Swot.each_domain { |d| domains << d }
       assert_equal domains.size, 2
-      assert_equal true, domains.all?{ |d| d.is_a? Swot }
-      assert_includes domains.map(&:to_s), "students.texas.edu"
-      assert_includes domains.map(&:to_s), "mit.edu"
+      assert_equal true, (domains.all? { |d| d.is_a? Swot })
+      assert_includes domains.map(&:to_s), 'students.texas.edu'
+      assert_includes domains.map(&:to_s), 'mit.edu'
     end
   end
 end
