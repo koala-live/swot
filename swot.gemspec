@@ -1,5 +1,6 @@
 Gem::Specification.new do |s|
-  s.name                  = 'swot'
+  s.name                  =  'swot'
+  s.version               =  Swot::VERSION
   s.homepage              = 'https://github.com/leereilly/swot'
   s.license               = 'MIT'
   s.summary               = 'Identify email addresses or domains names that belong to colleges or universities.'
