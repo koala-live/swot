@@ -1,6 +1,9 @@
+$:.push File.expand_path('lib', __dir__)
+require 'swot'
+
 Gem::Specification.new do |s|
   s.name                  = 'swot'
-  s.version               = '0.4.2'
+  s.version               = Swot::VERSION
   s.homepage              = 'https://github.com/leereilly/swot'
   s.license               = 'MIT'
   s.summary               = 'Identify email addresses or domains names that belong to colleges or universities.'
@@ -14,4 +17,7 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   s.require_paths = ['lib']
+
+  s.add_runtime_dependency 'naughty_or_nice', '~> 2.0'
+  s.add_runtime_dependency 'public_suffix'
 end
