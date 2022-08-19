@@ -1,9 +1,6 @@
-$:.push File.expand_path('lib', __dir__)
-require 'swot'
-
 Gem::Specification.new do |s|
   s.name                  = 'swot'
-  s.version               = Swot::VERSION
+  s.version               = '0.5.0'
   s.homepage              = 'https://github.com/leereilly/swot'
   s.license               = 'MIT'
   s.summary               = 'Identify email addresses or domains names that belong to colleges or universities.'

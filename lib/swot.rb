@@ -4,7 +4,7 @@ require_relative 'swot/academic_tlds'
 require_relative 'swot/collection_methods'
 
 class Swot
-  VERSION = '0.4.2'.freeze
+  VERSION = '0.5.0'.freeze
 
   # These are domains that snuck into the edu registry,
   # but don't pass the education sniff test
