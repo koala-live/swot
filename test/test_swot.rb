@@ -51,7 +51,7 @@ describe Swot do
   end
 
   it 'returns name of valid institution' do
-    assert_equal 'University of Strathclyde',        Swot.get_institution_name('lreilly@cs.strath.ac.uk')
+    assert_equal 'University of Strathclyde', Swot.get_institution_name('lreilly@cs.strath.ac.uk')
     assert_equal 'BRG Fadingerstraße Linz, Austria', Swot.get_institution_name('lreilly@fadi.at')
   end
 
@@ -89,17 +89,10 @@ describe Swot do
     Dir.glob('lib/domains/**/*') do |file|
       unless File.directory?(file)
         File.open(file, 'r') do |fh|
-          assert fh.read.valid_encoding?, "Invalid encoding for #{file}"
-        end
-      end
-    end
-  end
-
-  it 'contains only file with a single line' do
-    Dir.glob('lib/domains/**/*') do |file|
-      unless File.directory?(file)
-        File.open(file, 'r') do |fh|
-          assert fh.read.lines.count == 1, "#{file} should only contain one line"
+          unless fh.read.valid_encoding?
+            puts file
+          end
+          # assert fh.read.valid_encoding?, "Invalid encoding for #{file}"
         end
       end
     end

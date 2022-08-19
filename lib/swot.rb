@@ -70,7 +70,7 @@ class Swot
   #
   # Returns a string with the institution name; nil if nothing is found.
   def institution_name
-    @institution_name ||= File.read(file_path, mode: 'rb', external_encoding: 'UTF-8').strip
+    @institution_name ||= File.read(file_path, mode: 'rb', external_encoding: 'UTF-8').strip.split("\n").first
   rescue StandardError
     nil
   end
